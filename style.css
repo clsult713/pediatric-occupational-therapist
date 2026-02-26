@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "SN Pro", sans-serif;
+    background-color: orange;
+    color: whitesmoke;
+    height: 100vh;
+    margin: 0;
+}
+
+nav {
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: orange;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+nav li {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+}
+
+.heading::after {
+    content: "";
+    height: 7px;
+    width: 470px;
+    background-color: crimson;
+    border-radius: 25px;
+    bottom: -7px;
+    position: absolute;
+}
+
+.define-container.active {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('heavy_work.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px auto;
+    height: 80vh;
+    width: 70%;
+    transition: 0.6s ease;
+    opacity: 1;
+}
+
+.define-container {
+    opacity: 0;
+}
+
+.define-container.active p {
+    font-size: 1.5rem;
+    width: 70%;
+    margin-left: 60px;
+    opacity: 1;
+}
+
+.define-container p{
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.work-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200vh;
+    padding: 20px;
+}
+
+.work.active {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+}
+.work {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.work.active img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-right: 50px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+    border: 10px solid crimson;
+}
+
+.work img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 5px solid whitesmoke;
+    transition: 0.4s ease;
+}
+
+.work.active p {
+    background-color: crimson;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 40px;
+    padding: 2px 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.work p {
+    background-color: crimson;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 40px;
+    padding: 2px 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.reading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.reading-container ul {
+    list-style: none;
+}
+
+.reading-container li {
+    margin: 10px auto;
+}
+
+.reading-container a {
+    text-decoration: underline;
+    color: whitesmoke;
+    font-size: 2rem;
+    transition: 0.4s ease;
+}
+
+.reading-container a:hover {
+    color: crimson;
+}
+
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-bottom: 20px;
+    overflow-x: hidden;
+    transition: 0.4s ease;
+}      
+
+.about-me-container.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    margin-bottom: 20px;
+}
+
+.about-me-container.active img, .about-me-container.active p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.about-me-container.active img {
+    height: 300px;
+    width: 300px;
+    border: 10px solid crimson;
+    border-radius: 50%;
+}
+
+.about-me-container.active p{
+    font-size: 1.5rem;
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+.about-me-container img, .about-me-container p {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: 0.4s ease;
+}
